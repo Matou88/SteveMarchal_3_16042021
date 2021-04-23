@@ -20,4 +20,208 @@ h1 {
   font-family: roboto;
 }
 
+.fonction p {
+  font-family: roboto;
+}
+
+h2, h3, nav {
+  font-family: roboto;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-left: 5%;
+}
+
+h3 {
+  font-size: 2.3em;
+  margin-left: 2.5%;
+}
+
+p {
+  font-family: roboto-light;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+header a, header i {
+  position: absolute;
+  left: 30px;
+  top: 13px;
+  font-size: 1.5em;
+}
+
+.banner img {
+  object-fit: cover;
+  width: 100%;
+  height: 600px;
+}
+
+footer {
+  font-size: 2.2em;
+  background-color: #323232;
+  color: whitesmoke;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+footer img {
+  z-index: 2;
+  margin-left: 40px;
+  object-fit: cover;
+  width: 300px;
+}
+footer li {
+  padding-bottom: 20px;
+}
+footer i {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.intro {
+  text-align: center;
+  font-size: 2.8em;
+  height: 400px;
+  margin-bottom: 450px;
+}
+.intro--title {
+  background-color: #d5d5d5;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+}
+.intro--content {
+  background-color: #eeeeee;
+  padding-bottom: 100px;
+  padding-top: 40px;
+}
+.intro button {
+  margin-top: 0.5em;
+  padding: 0.8em;
+  color: whitesmoke;
+  font-size: 0.9em;
+  background: linear-gradient(160deg, #FF79DA, #9356DC);
+  border-radius: 2em;
+  border: none;
+  box-shadow: grey 2px 2px;
+}
+
+.fonction {
+  padding-bottom: 100px;
+}
+.fonction .fonction-list {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.fonction .circle {
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #9356DC;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: auto;
+  left: -30px;
+}
+.fonction article {
+  height: 5em;
+  width: 80%;
+  border-radius: 1.4em 1.4em;
+  background-color: #eeeeee;
+  font-size: 2em;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.fonction i {
+  color: gray;
+  position: absolute;
+  left: 15%;
+  top: auto;
+}
+
+.restaurants {
+  background-color: #eeeeee;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.restaurants--list {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.restaurants article {
+  width: 90%;
+  margin-bottom: 50px;
+  border-radius: 2em;
+  background-color: whitesmoke;
+  box-shadow: 10px 20px #d5d5d5;
+  position: relative;
+}
+.restaurants article img {
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+}
+.restaurants article p {
+  margin-left: 2.5%;
+  font-size: 2em;
+}
+.restaurants article i {
+  font-size: 3em;
+  position: absolute;
+  bottom: 18%;
+  right: 15%;
+}
+
+.pages--content {
+  background-color: #eeeeee;
+}
+.pages--title {
+  padding-top: 60px;
+  margin-top: 0;
+  margin-left: 5%;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+}
+.pages section .menu-card {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.pages section .menu-card article {
+  width: 90%;
+  margin-bottom: 50px;
+  border-radius: 2em;
+  background-color: white;
+  box-shadow: 10px 20px #d5d5d5;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 50% 50%;
+}
+.pages section .menu-card article p {
+  margin-left: 2.5%;
+  font-size: 2em;
+}
+
 /*# sourceMappingURL=style.css.map */
