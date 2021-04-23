@@ -24,17 +24,17 @@ h1 {
   font-family: roboto;
 }
 
-h2, h3, nav {
+h2, h3, nav strong {
   font-family: roboto;
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 3em;
   margin-left: 5%;
 }
 
 h3 {
-  font-size: 2.3em;
+  font-size: 2.4em;
   margin-left: 2.5%;
 }
 
@@ -194,34 +194,52 @@ footer i {
   right: 15%;
 }
 
-.pages--content {
+.pages .pages--content {
   background-color: #eeeeee;
 }
-.pages--title {
+.pages .pages--title {
   padding-top: 60px;
   margin-top: 0;
-  margin-left: 5%;
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
-}
-.pages section .menu-card {
+  font-size: 2.4em;
   display: flex;
-  flex-flow: column wrap;
+  justify-content: space-around;
   align-items: center;
 }
-.pages section .menu-card article {
+.pages .pages--title i {
+  font-size: 2em;
+}
+
+.menu-card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.pages section article {
   width: 90%;
   margin-bottom: 50px;
   border-radius: 2em;
   background-color: white;
   box-shadow: 10px 20px #d5d5d5;
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 85% 15%;
   grid-template-rows: 50% 50%;
 }
-.pages section .menu-card article p {
+.pages section .description {
   margin-left: 2.5%;
-  font-size: 2em;
+  grid-column: 1;
+  grid-row: 2;
+}
+.pages section .price {
+  grid-column: 2;
+  grid-row: 2;
+}
+.pages section h3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
