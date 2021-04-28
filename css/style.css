@@ -1,3 +1,47 @@
+@keyframes appear {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 15%;
+  }
+}
+@keyframes valid {
+  from {
+    font-size: 0em;
+  }
+  to {
+    font-size: 2em;
+  }
+}
+@keyframes reduction {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes like {
+  0% {
+    color: #9256dc;
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  30% {
+    transform: scale(1.2);
+    opacity: 0.4;
+  }
+  60% {
+    transform: scale(1.3);
+    opacity: 0.8;
+  }
+  100% {
+    color: #ff7ad9;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "shrikhand";
   src: url(/fonts/Shrikhand-Regular.ttf) format("truetype");
@@ -24,18 +68,17 @@ h1 {
   font-family: roboto;
 }
 
-h2, h3, nav strong {
+h2, h3, strong {
   font-family: roboto;
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 1.4em;
   margin-left: 5%;
 }
 
 h3 {
-  font-size: 2.4em;
-  margin-left: 2.5%;
+  font-size: 1.1em;
 }
 
 p {
@@ -51,50 +94,124 @@ ul {
   list-style-type: none;
 }
 
+footer span {
+  font-family: "shrikhand";
+  font-size: 1.6em;
+  color: whitesmoke;
+}
+
+button {
+  margin-top: 0.7em;
+  padding: 1em;
+  color: whitesmoke;
+  font-size: 1em;
+  background: linear-gradient(160deg, #FF79DA, #9356DC);
+  border-radius: 2em;
+  border: none;
+  box-shadow: grey 2px 2px;
+}
+
+.command {
+  background-color: #eeeeee;
+  padding-top: 20px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+.command button {
+  width: 60%;
+}
+
 header {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 5% 5% 80% 10%;
+  margin-bottom: 10px;
 }
 header a, header i {
-  position: absolute;
-  left: 30px;
-  top: 13px;
-  font-size: 1.5em;
+  grid-column: 2;
+  font-size: 1.1em;
+  align-self: center;
+}
+header .logo {
+  object-fit: cover;
+  width: 50%;
+  grid-column: 3;
+  justify-self: center;
 }
 
 .banner img {
   object-fit: cover;
   width: 100%;
-  height: 600px;
+  height: 250px;
 }
 
 footer {
-  font-size: 2.2em;
+  font-size: 1em;
   background-color: #323232;
   color: whitesmoke;
-  padding-top: 40px;
-  padding-bottom: 20px;
-}
-footer img {
-  z-index: 2;
-  margin-left: 40px;
-  object-fit: cover;
-  width: 300px;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 footer li {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+}
+footer .fa-utensils {
+  transform: scale(0.9, 0.7);
+}
+footer .fa-hands-helping {
+  transform: scale(0.6, 0.7);
 }
 footer i {
-  width: 50px;
-  margin-right: 10px;
+  width: 15px;
+}
+footer span {
+  margin-left: 40px;
+}
+footer a {
+  color: whitesmoke;
+}
+
+.fa-heart:hover {
+  font-weight: bold;
+  animation: like;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.6s;
+  cursor: pointer;
+}
+
+.menu-card article:hover .price {
+  transition: transform 0.2s ease-out;
+  transform: translateX(-150%);
+}
+.menu-card article:hover .appear {
+  animation: appear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.2s;
+}
+.menu-card article:hover .fa-check-circle {
+  animation: valid;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-duration: 0.2s;
+  animation-delay: 0.2s;
+}
+.menu-card article:hover .detail .description {
+  animation: reduction;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
 }
 
 .intro {
   text-align: center;
-  font-size: 2.8em;
-  height: 400px;
-  margin-bottom: 450px;
+  font-size: 1.2em;
+  height: 270px;
+  margin-bottom: 10em;
 }
 .intro--title {
   background-color: #d5d5d5;
@@ -103,22 +220,12 @@ footer i {
 }
 .intro--content {
   background-color: #eeeeee;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
   padding-top: 40px;
-}
-.intro button {
-  margin-top: 0.5em;
-  padding: 0.8em;
-  color: whitesmoke;
-  font-size: 0.9em;
-  background: linear-gradient(160deg, #FF79DA, #9356DC);
-  border-radius: 2em;
-  border: none;
-  box-shadow: grey 2px 2px;
 }
 
 .fonction {
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 .fonction .fonction-list {
   display: flex;
@@ -127,8 +234,8 @@ footer i {
 }
 .fonction .circle {
   margin: 10px;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   border-radius: 100%;
   background-color: #9356DC;
   color: whitesmoke;
@@ -137,14 +244,14 @@ footer i {
   align-items: center;
   position: absolute;
   top: auto;
-  left: -30px;
+  left: -20px;
 }
 .fonction article {
-  height: 5em;
+  height: 4em;
   width: 80%;
-  border-radius: 1.4em 1.4em;
+  border-radius: 1em 1em;
   background-color: #eeeeee;
-  font-size: 2em;
+  font-size: 1em;
   margin-bottom: 1em;
   display: flex;
   align-items: center;
@@ -154,14 +261,17 @@ footer i {
 .fonction i {
   color: gray;
   position: absolute;
-  left: 15%;
+  left: 10%;
   top: auto;
+}
+.fonction .number {
+  font-size: 0.7em;
 }
 
 .restaurants {
   background-color: #eeeeee;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 .restaurants--list {
   display: flex;
@@ -170,39 +280,74 @@ footer i {
 }
 .restaurants article {
   width: 90%;
-  margin-bottom: 50px;
+  margin-bottom: 1em;
   border-radius: 2em;
   background-color: whitesmoke;
-  box-shadow: 10px 20px #d5d5d5;
+  box-shadow: -2px 2px #d5d5d5;
   position: relative;
 }
 .restaurants article img {
   object-fit: cover;
   width: 100%;
-  height: 500px;
+  height: 10em;
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
+  object-position: bottom;
+}
+.restaurants article .new {
+  background-color: #99E2D0;
+  width: 25%;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.restaurants article .new span {
+  font-family: roboto;
+  color: #32b091;
+}
+.restaurants article .description {
+  height: 4em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .restaurants article p {
-  margin-left: 2.5%;
-  font-size: 2em;
+  font-size: 1.2em;
+  margin-top: 0.4em;
 }
 .restaurants article i {
-  font-size: 3em;
-  position: absolute;
-  bottom: 18%;
-  right: 15%;
+  font-size: 1.4em;
+  transform: scale(1, 1.2);
+  color: grey;
+  margin-bottom: 1em;
+}
+.restaurants article .note {
+  object-position: center;
 }
 
-.pages .pages--content {
-  background-color: #eeeeee;
+.pages--content .banner {
+  overflow: hidden;
 }
-.pages .pages--title {
-  padding-top: 60px;
-  margin-top: 0;
+.pages--content h2 {
+  font-family: roboto-light;
+  border-bottom: 0.2em solid #99E2D0;
+  width: 15%;
+}
+.pages .pages--text {
+  position: relative;
+  background-color: #eeeeee;
+  padding-top: 1em;
+  margin-top: -2.5em;
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
-  font-size: 2.4em;
+}
+.pages .pages--title {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -219,27 +364,57 @@ footer i {
 
 .pages section article {
   width: 90%;
-  margin-bottom: 50px;
-  border-radius: 2em;
+  min-height: 4em;
+  margin-bottom: 1em;
+  border-radius: 1em 1em;
   background-color: white;
-  box-shadow: 10px 20px #d5d5d5;
-  display: grid;
-  grid-template-columns: 85% 15%;
-  grid-template-rows: 50% 50%;
+  box-shadow: -2px 2px #d5d5d5;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+.pages section article .detail {
+  margin-left: 2.5%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 .pages section .description {
-  margin-left: 2.5%;
-  grid-column: 1;
-  grid-row: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.5em;
+  margin-top: 0.3em;
+  font-size: 0.9em;
 }
 .pages section .price {
-  grid-column: 2;
-  grid-row: 2;
+  margin-right: 5%;
+  margin-bottom: 0.5em;
+  z-index: 1;
+  background: white;
+  opacity: 1;
 }
 .pages section h3 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row: 1;
+  margin: 0;
+}
+
+.appear {
+  position: absolute;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  border-top-right-radius: 1em 1em;
+  border-bottom-right-radius: 1em 1em;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.appear .fa-check-circle {
+  color: white;
+  font-size: 0em;
 }
 
 /*# sourceMappingURL=style.css.map */

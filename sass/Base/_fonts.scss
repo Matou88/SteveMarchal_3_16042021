@@ -29,18 +29,17 @@ h1{
     }
 }
 
-h2, h3, nav strong{
+h2, h3, strong{
     font-family: roboto;
 }
 
 h2{
-    font-size: 3em;
+    font-size: 1.4em;
     margin-left: 5%;
 }
 
 h3{
-    font-size: 2.4em;
-    margin-left: 2.5%;
+    font-size: 1.1em;
 }
 
 p{
@@ -54,4 +53,10 @@ a{
 
 ul{
     list-style-type: none;
+}
+
+footer span{
+    font-family: "shrikhand";
+    font-size: 1.6em;
+    color: whitesmoke;
 }

@@ -1,22 +1,32 @@
 .pages{
-    .pages--content{
+    &--content{
+        .banner{
+            overflow: hidden;
+        }
+
+        h2{
+            font-family: roboto-light;
+            border-bottom: .2em solid $color-tertiary;
+            width: 15%;
+        }
+}
+    .pages--text{
+        position: relative;        
         background-color: $color-background;
+        padding-top: 1em;
+        margin-top: -2.5em;
+        border-top-left-radius: 2em;
+        border-top-right-radius: 2em;
     }
 
     .pages--title{
-        padding-top: 60px;
-        margin-top: 0;
-        border-top-left-radius: 2em;
-        border-top-right-radius: 2em;
-        font-size: 2.4em;
         display: flex;
         justify-content: space-around;
         align-items: center;
         i{
             font-size: 2em;
         }
-    }
-    
+    }   
 }
 
 .menu-card{
@@ -29,30 +39,61 @@
 
     article{
         width: 90%;
-        margin-bottom: 50px;
-        border-radius: 2em;
+        min-height: 4em;
+        margin-bottom: 1em;
+        border-radius: 1em 1em;
         background-color: white;
-        box-shadow: 10px 20px darken($color-background,10%);
-        display: grid;
-        grid-template-columns: 85% 15%;
-        grid-template-rows: 50% 50%;
-    }
+        box-shadow: -2px 2px darken($color-background,10%);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        position: relative;
+            .detail{
+                margin-left: 2.5%;
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+            }
+        }
+
+
 
     .description{
-        margin-left: 2.5%;
-        grid-column: 1;
-        grid-row: 2;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: .5em;
+        margin-top: .3em;
+        font-size: .9em;
     }
 
     .price{
-        grid-column: 2;
-        grid-row: 2;
+        margin-right: 5%;
+        margin-bottom: .5em;
+        z-index: 1;
+        background: white;
+        opacity: 1;
     }
 
     h3{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row: 1;
+        margin: 0;
     }
 }
 
+.appear{
+    position: absolute;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    border-top-right-radius: 1em 1em;
+    border-bottom-right-radius: 1em 1em;
+    background-color: $color-tertiary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .fa-check-circle{
+        color: white;
+        font-size: 0em;
+    }
+}

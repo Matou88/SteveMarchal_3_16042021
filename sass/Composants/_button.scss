@@ -1,0 +1,22 @@
+button{
+        margin-top: .7em;
+        padding: 1em;
+        color: whitesmoke;
+        font-size: 1em;
+        background: linear-gradient(160deg, $color-secondary, $color-primary);
+        border-radius: 2em;
+        border: none;
+        box-shadow: grey 2px 2px;
+    }
+
+.command{
+
+    background-color: $color-background;
+    padding-top: 20px;
+    padding-bottom: 70px;
+    text-align: center;
+
+    button{
+        width: 60%;
+    }
+}
