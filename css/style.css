@@ -1,3 +1,19 @@
+@keyframes fonction {
+  0% {
+    background-color: #eeeeee;
+  }
+  100% {
+    background-color: #e4d5f6;
+  }
+}
+@keyframes fonction-i {
+  0% {
+    color: gray;
+  }
+  100% {
+    color: #9356DC;
+  }
+}
 @keyframes appear {
   from {
     width: 0%;
@@ -42,6 +58,46 @@
     opacity: 1;
   }
 }
+@keyframes foot {
+  0% {
+    color: whitesmoke;
+    transform: scale(1);
+  }
+  100% {
+    color: #99E2D0;
+    transform: scale(1.3);
+  }
+}
+@keyframes ohmy {
+  0% {
+    color: #9356DC;
+  }
+  30% {
+    color: #FF79DA;
+  }
+  50% {
+    color: #99E2D0;
+  }
+  75% {
+    color: #FF79DA;
+  }
+  100% {
+    color: #9356DC;
+  }
+}
+@keyframes button {
+  0% {
+    opacity: 1;
+    box-shadow: 4px 4px 4px 4px #bbbbbb;
+  }
+  60% {
+    box-shadow: 5px 5px 15px 5px #888888;
+  }
+  100% {
+    opacity: 0.6;
+    box-shadow: 10px 10px 20px 10px #888888;
+  }
+}
 @font-face {
   font-family: "shrikhand";
   src: url(/fonts/Shrikhand-Regular.ttf) format("truetype");
@@ -59,8 +115,22 @@
 h1 {
   font-family: "shrikhand";
 }
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 4em;
+  }
+}
 
 .index h1 {
+  font-family: roboto;
+}
+
+.intro span {
   font-family: roboto;
 }
 
@@ -76,12 +146,27 @@ h2 {
   font-size: 1.4em;
   margin-left: 5%;
 }
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.4em;
+  }
+}
 
 h3 {
   font-size: 1.1em;
 }
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.4em;
+  }
+}
+@media (min-width: 992px) {
+  h3 {
+    font-size: 1.6em;
+  }
+}
 
-p {
+p, nav li {
   font-family: roboto-light;
 }
 
@@ -99,6 +184,16 @@ footer span {
   font-size: 1.6em;
   color: whitesmoke;
 }
+@media (min-width: 768px) {
+  footer span {
+    font-size: 2em;
+  }
+}
+@media (min-width: 992px) {
+  footer span {
+    font-size: 2.3em;
+  }
+}
 
 button {
   margin-top: 0.7em;
@@ -108,28 +203,53 @@ button {
   background: linear-gradient(160deg, #FF79DA, #9356DC);
   border-radius: 2em;
   border: none;
-  box-shadow: grey 2px 2px;
+  box-shadow: 4px 4px 4px 4px #bbbbbb;
+}
+@media (min-width: 768px) {
+  button {
+    font-size: 1.2em;
+    height: 3.5em;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  button {
+    height: 4em;
+    width: 55%;
+    font-size: 1.6em;
+  }
 }
 
 .command {
   background-color: #eeeeee;
-  padding-top: 20px;
-  padding-bottom: 70px;
+  padding-top: 1.5em;
   text-align: center;
-}
-.command button {
-  width: 60%;
 }
 
 header {
   display: grid;
   grid-template-columns: 5% 5% 80% 10%;
-  margin-bottom: 10px;
+  margin-bottom: 1em;
+}
+@media (min-width: 768px) {
+  header {
+    margin-bottom: 2em;
+  }
 }
 header a, header i {
   grid-column: 2;
   font-size: 1.1em;
   align-self: center;
+}
+@media (min-width: 576px) {
+  header a, header i {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 768px) {
+  header a, header i {
+    font-size: 1.6em;
+  }
 }
 header .logo {
   object-fit: cover;
@@ -143,6 +263,21 @@ header .logo {
   width: 100%;
   height: 250px;
 }
+@media (min-width: 576px) {
+  .banner img {
+    height: 270px;
+  }
+}
+@media (min-width: 768px) {
+  .banner img {
+    height: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .banner img {
+    height: 620px;
+  }
+}
 
 footer {
   font-size: 1em;
@@ -151,8 +286,29 @@ footer {
   padding-top: 1em;
   padding-bottom: 1em;
 }
+@media (min-width: 768px) {
+  footer {
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
+  footer {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 768px) {
+  footer ul {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    text-align: center;
+    padding-left: 0;
+    padding-top: 1.5em;
+  }
+}
 footer li {
-  padding-bottom: 10px;
+  padding-bottom: 0.7em;
 }
 footer .fa-utensils {
   transform: scale(0.9, 0.7);
@@ -166,8 +322,30 @@ footer i {
 footer span {
   margin-left: 40px;
 }
+@media (min-width: 768px) {
+  footer span {
+    margin: 0;
+    align-self: center;
+  }
+}
 footer a {
   color: whitesmoke;
+}
+
+.fonction article:hover {
+  animation: fonction;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  cursor: pointer;
+}
+.fonction article:hover i {
+  animation: fonction-i;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
 }
 
 .fa-heart:hover {
@@ -183,6 +361,21 @@ footer a {
 .menu-card article:hover .price {
   transition: transform 0.2s ease-out;
   transform: translateX(-150%);
+}
+@media (min-width: 576px) {
+  .menu-card article:hover .price {
+    transform: translateX(-260%);
+  }
+}
+@media (min-width: 768px) {
+  .menu-card article:hover .price {
+    transform: translateX(-280%);
+  }
+}
+@media (min-width: 992px) {
+  .menu-card article:hover .price {
+    transform: translateX(-320%);
+  }
 }
 .menu-card article:hover .appear {
   animation: appear;
@@ -207,25 +400,87 @@ footer a {
   animation-duration: 0.2s;
 }
 
+@media (min-width: 768px) {
+  footer li:hover {
+    border-bottom: 4px solid #99E2D0;
+  }
+}
+
+@media (min-width: 992px) {
+  footer li:hover, footer li:hover a {
+    border-bottom: none;
+    animation: foot;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-duration: 0.4s;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  footer span {
+    animation: ohmy;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 4s;
+  }
+}
+
+button:hover {
+  animation: button;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 0.6s;
+  cursor: pointer;
+}
+
 .intro {
   text-align: center;
   font-size: 1.2em;
-  height: 270px;
-  margin-bottom: 10em;
+  margin-bottom: 2em;
+  max-width: 950px;
+  margin: auto;
 }
 .intro--title {
-  background-color: #d5d5d5;
+  background-color: #e1e1e1;
   padding-top: 0.7em;
   padding-bottom: 0.7em;
 }
 .intro--content {
   background-color: #eeeeee;
-  padding-bottom: 70px;
-  padding-top: 40px;
+  padding-bottom: 3em;
+  padding-top: 1em;
+}
+@media (min-width: 768px) {
+  .intro p {
+    font-size: 1.6em;
+  }
+}
+.intro span, .intro i {
+  font-size: 0.9em;
+}
+@media (min-width: 768px) {
+  .intro span, .intro i {
+    font-size: 1.6em;
+  }
+}
+@media (min-width: 992px) {
+  .intro span, .intro i {
+    font-size: 2em;
+  }
+}
+.intro i {
+  margin-right: 1em;
 }
 
 .fonction {
-  padding-bottom: 50px;
+  padding-bottom: 2em;
+}
+.fonction h2 {
+  margin-left: 8%;
 }
 .fonction .fonction-list {
   display: flex;
@@ -234,8 +489,8 @@ footer a {
 }
 .fonction .circle {
   margin: 10px;
-  width: 20px;
-  height: 20px;
+  width: 1.4em;
+  height: 1.4em;
   border-radius: 100%;
   background-color: #9356DC;
   color: whitesmoke;
@@ -246,6 +501,13 @@ footer a {
   top: auto;
   left: -20px;
 }
+@media (min-width: 768px) {
+  .fonction .circle {
+    height: 1.6em;
+    width: 1.6em;
+    left: -28px;
+  }
+}
 .fonction article {
   height: 4em;
   width: 80%;
@@ -253,19 +515,63 @@ footer a {
   background-color: #eeeeee;
   font-size: 1em;
   margin-bottom: 1em;
-  display: flex;
+  box-shadow: 5px 5px 15px 5px #d5d5d5;
   align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 10% 15% 75%;
   position: relative;
+  max-width: 950px;
+}
+@media (min-width: 576px) {
+  .fonction article {
+    grid-template-columns: 15% 20% 65%;
+  }
+}
+@media (min-width: 768px) {
+  .fonction article {
+    height: 5em;
+    font-size: 1.6em;
+    border-radius: 2em;
+    margin-bottom: 2em;
+  }
 }
 .fonction i {
   color: gray;
-  position: absolute;
-  left: 10%;
-  top: auto;
+  grid-column: 2;
 }
 .fonction .number {
   font-size: 0.7em;
+}
+@media (min-width: 768px) {
+  .fonction .number {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 992px) {
+  .presentation {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #eeeeee;
+    margin-bottom: 2em;
+  }
+  .presentation .intro {
+    padding: 0;
+    margin: 0;
+    width: 50%;
+  }
+  .presentation .fonction {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    align-self: center;
+  }
+  .presentation .fonction h2 {
+    text-align: center;
+    align-items: center;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+  }
 }
 
 .restaurants {
@@ -273,18 +579,39 @@ footer a {
   padding-top: 2em;
   padding-bottom: 2em;
 }
+@media (min-width: 992px) {
+  .restaurants {
+    border-radius: 2em;
+    width: 95%;
+    margin: auto;
+    margin-top: 4em;
+    margin-bottom: 4em;
+  }
+}
 .restaurants--list {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .restaurants--list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 .restaurants article {
   width: 90%;
   margin-bottom: 1em;
   border-radius: 2em;
   background-color: whitesmoke;
-  box-shadow: -2px 2px #d5d5d5;
+  box-shadow: 2px 2px 2px 2px #d5d5d5;
   position: relative;
+}
+@media (min-width: 768px) {
+  .restaurants article {
+    width: 45%;
+    margin-bottom: 2em;
+  }
 }
 .restaurants article img {
   object-fit: cover;
@@ -293,6 +620,11 @@ footer a {
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
   object-position: bottom;
+}
+@media (min-width: 768px) {
+  .restaurants article img {
+    height: 17em;
+  }
 }
 .restaurants article .new {
   background-color: #99E2D0;
@@ -321,16 +653,35 @@ footer a {
   font-size: 1.2em;
   margin-top: 0.4em;
 }
+@media (min-width: 768px) {
+  .restaurants article p {
+    font-size: 1.4em;
+    margin-top: 0.2em;
+  }
+}
 .restaurants article i {
   font-size: 1.4em;
   transform: scale(1, 1.2);
   color: grey;
   margin-bottom: 1em;
 }
+@media (min-width: 768px) {
+  .restaurants article i {
+    font-size: 1.6em;
+  }
+}
 .restaurants article .note {
   object-position: center;
 }
 
+@media (min-width: 768px) {
+  .pages--content {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background: linear-gradient(125deg, #99E2D0, #ae80e5);
+  }
+}
 .pages--content .banner {
   overflow: hidden;
 }
@@ -339,6 +690,22 @@ footer a {
   border-bottom: 0.2em solid #99E2D0;
   width: 15%;
 }
+@media (min-width: 576px) {
+  .pages--content h2 {
+    width: 8%;
+  }
+}
+@media (min-width: 768px) {
+  .pages--content h2 {
+    width: 7%;
+    font-size: 2em;
+  }
+}
+@media (min-width: 992px) {
+  .pages--content h2 {
+    margin-bottom: 1.4em;
+  }
+}
 .pages .pages--text {
   position: relative;
   background-color: #eeeeee;
@@ -346,6 +713,21 @@ footer a {
   margin-top: -2.5em;
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
+  padding-bottom: 6em;
+  max-width: 1000px;
+}
+@media (min-width: 768px) {
+  .pages .pages--text {
+    width: 90%;
+    margin-top: -5em;
+  }
+}
+@media (min-width: 992px) {
+  .pages .pages--text {
+    margin-bottom: 2em;
+    border-radius: 2em;
+    margin-top: -8em;
+  }
 }
 .pages .pages--title {
   display: flex;
@@ -354,6 +736,16 @@ footer a {
 }
 .pages .pages--title i {
   font-size: 2em;
+}
+@media (min-width: 768px) {
+  .pages .pages--title i {
+    font-size: 4em;
+  }
+}
+@media (min-width: 992px) {
+  .pages .pages--title i {
+    font-size: 5em;
+  }
 }
 
 .menu-card {
@@ -365,6 +757,7 @@ footer a {
 .pages section article {
   width: 90%;
   min-height: 4em;
+  max-width: 900px;
   margin-bottom: 1em;
   border-radius: 1em 1em;
   background-color: white;
@@ -374,6 +767,18 @@ footer a {
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+}
+@media (min-width: 768px) {
+  .pages section article {
+    height: 6em;
+  }
+}
+@media (min-width: 992px) {
+  .pages section article {
+    height: 7em;
+    width: 80%;
+    margin-bottom: 1.4em;
+  }
 }
 .pages section article .detail {
   margin-left: 2.5%;
@@ -389,12 +794,25 @@ footer a {
   margin-top: 0.3em;
   font-size: 0.9em;
 }
+@media (min-width: 768px) {
+  .pages section .description {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    font-size: 1.2em;
+  }
+}
 .pages section .price {
   margin-right: 5%;
   margin-bottom: 0.5em;
   z-index: 1;
   background: white;
   opacity: 1;
+}
+@media (min-width: 768px) {
+  .pages section .price {
+    margin-bottom: 0.8em;
+    font-size: 1.2em;
+  }
 }
 .pages section h3 {
   margin: 0;

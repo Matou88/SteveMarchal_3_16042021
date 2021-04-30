@@ -17,10 +17,21 @@
 
 h1{
     font-family: "shrikhand";
+        @media (min-width: 768px) {
+            font-size: 3em;
+        }
+        @media (min-width: 992px){
+            font-size: 4em;;
+        }
 }
 
 .index{
     h1{font-family: roboto;}
+
+}
+
+.intro span{
+    font-family: roboto;
 }
 
 .fonction{
@@ -36,13 +47,22 @@ h2, h3, strong{
 h2{
     font-size: 1.4em;
     margin-left: 5%;
+        @media (min-width: 768px) {
+            font-size: 2.4em;
+        }
 }
 
 h3{
     font-size: 1.1em;
+        @media (min-width: 768px) {
+            font-size: 1.4em;
+        }
+        @media (min-width: 992px){
+            font-size: 1.6em;
+        }
 }
 
-p{
+p, nav li{
     font-family: roboto-light;
 }
 
@@ -59,4 +79,10 @@ footer span{
     font-family: "shrikhand";
     font-size: 1.6em;
     color: whitesmoke;
+        @media (min-width: 768px) {
+            font-size: 2em;
+        }
+        @media (min-width: 992px){
+            font-size: 2.3em;
+        }
 }

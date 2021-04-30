@@ -1,3 +1,20 @@
+.fonction article:hover{
+    animation: fonction;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+    cursor: pointer;
+        i{
+            animation: fonction-i;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+            animation-duration: 1s;
+        }
+}
+
+
 .fa-heart:hover{
     font-weight: bold;
     animation: like;
@@ -14,6 +31,16 @@
             .price{
                 transition: transform .2s ease-out;
                 transform: translateX(-150%);
+                    @media (min-width: 576px) {
+                        transform: translateX(-260%);
+                    }
+                    @media (min-width: 768px) {
+                        transform: translateX(-280%);
+                    }
+                    @media (min-width: 992px) {
+                        transform: translateX(-320%);
+                    }
+
             }
             .appear{
                 animation: appear;
@@ -39,4 +66,41 @@
             }
         }
     }
+}
+
+footer li:hover{
+    @media (min-width: 768px){
+    border-bottom: 4px solid $color-tertiary;
+}
+}
+
+footer li:hover,footer li:hover a{
+    @media (min-width: 992px){
+        border-bottom: none;
+        animation: foot;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+        animation-duration: .4s;
+        cursor: pointer;
+    }
+}
+
+footer span{
+    @media (min-width: 768px){
+        animation: ohmy;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-duration: 4s;
+    }
+}
+
+button:hover{
+        animation: button;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+        animation-duration: .6s;
+        cursor: pointer;
 }

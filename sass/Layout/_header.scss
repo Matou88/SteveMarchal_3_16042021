@@ -1,11 +1,23 @@
 header{
     display: grid;
     grid-template-columns: 5% 5% 80% 10%;
-    margin-bottom: 10px;
+    margin-bottom: 1em;
+
+        @media(min-width:768px){
+            margin-bottom: 2em;
+        }
+
         a, i{
             grid-column: 2;
             font-size: 1.1em;
             align-self: center;
+            
+                @media (min-width: 576px) {
+                    font-size: 1.3em;
+                }
+                @media (min-width: 768px) {
+                    font-size: 1.6em;
+                }
         }
 
         .logo{
@@ -21,5 +33,14 @@ header{
         object-fit: cover;
         width: 100%;
         height: 250px;
+            @media (min-width: 576px) {
+                height: 270px;
+            }
+            @media (min-width: 768px) {
+                height: 500px;
+            }
+            @media (min-width: 992px){
+                height: 620px;
+            }
     }
 }

@@ -1,5 +1,14 @@
 .pages{
+
     &--content{
+
+        @media (min-width: 768px) {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            background: linear-gradient(125deg, $color-tertiary, lighten($color-primary, 10%));
+        }
+
         .banner{
             overflow: hidden;
         }
@@ -8,8 +17,22 @@
             font-family: roboto-light;
             border-bottom: .2em solid $color-tertiary;
             width: 15%;
+
+                @media (min-width: 576px) {
+                    width: 8%;
+                }
+
+                @media (min-width: 768px) {
+                    width: 7%;
+                    font-size: 2em;
+                }
+
+                @media (min-width: 992px){
+                    margin-bottom: 1.4em;
+                }
         }
 }
+
     .pages--text{
         position: relative;        
         background-color: $color-background;
@@ -17,6 +40,19 @@
         margin-top: -2.5em;
         border-top-left-radius: 2em;
         border-top-right-radius: 2em;
+        padding-bottom: 6em;
+        max-width: 1000px;
+
+            @media (min-width: 768px) {
+                width: 90%;
+                margin-top: -5em;
+            }
+
+            @media (min-width: 992px){
+                margin-bottom: 2em;
+                border-radius: 2em;
+                margin-top: -8em;
+            }
     }
 
     .pages--title{
@@ -25,6 +61,13 @@
         align-items: center;
         i{
             font-size: 2em;
+                @media (min-width: 768px) {
+                    font-size: 4em;
+                }
+
+                @media (min-width: 992px){
+                    font-size: 5em;
+                }
         }
     }   
 }
@@ -40,6 +83,7 @@
     article{
         width: 90%;
         min-height: 4em;
+        max-width: 900px;
         margin-bottom: 1em;
         border-radius: 1em 1em;
         background-color: white;
@@ -49,6 +93,17 @@
         justify-content: space-between;
         align-items: flex-end;
         position: relative;
+
+            @media (min-width: 768px) {
+                height: 6em;
+            }
+
+            @media (min-width: 992px){
+                height: 7em;
+                width: 80%;
+                margin-bottom: 1.4em;
+            }
+
             .detail{
                 margin-left: 2.5%;
                 display: flex;
@@ -57,8 +112,6 @@
             }
         }
 
-
-
     .description{
         white-space: nowrap;
         overflow: hidden;
@@ -66,6 +119,11 @@
         margin-bottom: .5em;
         margin-top: .3em;
         font-size: .9em;
+            @media (min-width: 768px) {
+                margin-top: .8em;
+                margin-bottom: .8em;
+                font-size: 1.2em;
+            }
     }
 
     .price{
@@ -74,6 +132,10 @@
         z-index: 1;
         background: white;
         opacity: 1;
+        @media (min-width: 768px) {
+            margin-bottom: .8em;
+            font-size: 1.2em;
+        }
     }
 
     h3{
@@ -92,8 +154,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .fa-check-circle{
-        color: white;
-        font-size: 0em;
-    }
+
+        .fa-check-circle{
+            color: white;
+            font-size: 0em;
+        }
 }
