@@ -24,4 +24,7 @@ button{
     background-color: $color-background;
     padding-top: 1.5em;
     text-align: center;
+        button{
+            width: 60%;
+        }
 }

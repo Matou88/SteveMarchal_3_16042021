@@ -225,6 +225,9 @@ button {
   padding-top: 1.5em;
   text-align: center;
 }
+.command button {
+  width: 60%;
+}
 
 header {
   display: grid;
