@@ -25,6 +25,9 @@ header{
             width: 50%;
             grid-column: 3;
             justify-self: center;
+            @media (min-width: 768px) {
+                width: 40%;
+            }
         }
 }
 
@@ -37,10 +40,10 @@ header{
                 height: 270px;
             }
             @media (min-width: 768px) {
-                height: 500px;
+                height: 300px;
             }
             @media (min-width: 992px){
-                height: 620px;
+                height: 380px;
             }
     }
 }

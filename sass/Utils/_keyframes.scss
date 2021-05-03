@@ -1,3 +1,22 @@
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes index-arrival{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 @keyframes fonction {
     0%{
         background-color: $color-background;
@@ -18,14 +37,42 @@
     }
 }
 
+@keyframes food{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes appear{  
     from {width: 0%;}
     to {width: 15%;}
 }
 
+@keyframes rotate{
+    0% {
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes valid{
-    from {font-size: 0em;}
-    to{font-size: 2em;}
+    0%{
+        font-size: 0;
+    }
+
+    100%{
+        font-size: 2.4em;
+    }
 }
 
 @keyframes reduction{
@@ -54,6 +101,45 @@
         color: hsl(317deg, 100%, 74%);
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+@keyframes like2{
+    0%{
+        background: linear-gradient(#eee 100%, $color-primary 0%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    10%{
+        background: linear-gradient(#eee 80%, $color-primary 20%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    40%{
+        background: linear-gradient(#eee 65%, $color-primary 35%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    60%{
+        background: linear-gradient(#eee 50%, $color-primary 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    80%{
+        background: linear-gradient(#eee 20%, $color-primary 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    100%{
+        background: $color-primary;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
     }
 }
 

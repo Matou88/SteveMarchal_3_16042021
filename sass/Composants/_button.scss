@@ -7,17 +7,6 @@ button{
         border-radius: 2em;
         border: none;
         box-shadow: 4px 4px 4px 4px darken($color-background, 20%);
-        @media (min-width: 768px) {
-            font-size: 1.2em;
-            height: 3.5em;
-            width: 50%;
-        }
-
-        @media (min-width: 992px){
-            height: 4em;
-            width: 55%;
-            font-size: 1.6em;
-        }
     }
 
 .command{
@@ -26,5 +15,10 @@ button{
     text-align: center;
         button{
             width: 60%;
+
+                @media (min-width: 768px){
+                    height: 3em;
+                    font-size: 1.4em;
+                }
         }
 }

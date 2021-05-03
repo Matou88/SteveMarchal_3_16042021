@@ -15,18 +15,41 @@
 }
 
 
-.fa-heart:hover{
+.fa-heart{
+
+    &:hover{
     font-weight: bold;
-    animation: like;
-    animation-iteration-count: 1;
+    animation: like2;
+
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
-    animation-duration: .6s;
+    animation-duration: .4s;
     cursor: pointer;
+    }
 }
 
 .menu-card{
+    :nth-child(1){
+        animation-delay: .8s;
+    }
+    :nth-child(2){
+        animation-delay: 1.1s;
+    }
+    :nth-child(3){
+        animation-delay: 1.5s;
+    }
+    :nth-child(4){
+        animation-delay: 1.8s;
+    }
+
+
     article{
+        animation: food;
+        animation-fill-mode: backwards;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-duration: 1s;
+
         &:hover{
             .price{
                 transition: transform .2s ease-out;
@@ -50,11 +73,10 @@
                 animation-duration: .2s;
             }
             .fa-check-circle{
-                animation: valid;
-                animation-iteration-count: 1;
+                animation: valid, rotate;
                 animation-fill-mode: forwards;
-                animation-timing-function: ease-out;
-                animation-duration: .2s;
+                animation-timing-function: ease-out, ease-in-out;
+                animation-duration: .3s, .3s;
                 animation-delay: .2s;  
             }
             .detail .description{
@@ -71,22 +93,11 @@
 footer li:hover{
     @media (min-width: 768px){
     border-bottom: 4px solid $color-tertiary;
-}
-}
-
-footer li:hover,footer li:hover a{
-    @media (min-width: 992px){
-        border-bottom: none;
-        animation: foot;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in;
-        animation-duration: .4s;
-        cursor: pointer;
+    cursor: pointer;
     }
 }
 
-footer span{
+footer span:hover{
     @media (min-width: 768px){
         animation: ohmy;
         animation-iteration-count: infinite;
@@ -98,9 +109,16 @@ footer span{
 
 button:hover{
         animation: button;
-        animation-iteration-count: 1;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in;
         animation-duration: .6s;
         cursor: pointer;
+}
+
+.index article:hover{
+    animation: button;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-duration: .6s;
+    cursor: pointer;
 }
