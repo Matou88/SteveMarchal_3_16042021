@@ -753,9 +753,11 @@ button:hover {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;
   margin-left: 10%;
   margin-right: 10%;
+}
+.restaurants article h3 {
+  margin: 0;
 }
 .restaurants article p {
   font-size: 1.2em;
@@ -770,7 +772,12 @@ button:hover {
 .restaurants article i {
   font-size: 1.4em;
   color: grey;
-  margin-bottom: 1em;
+  margin-top: 0.1em;
+}
+@media (min-width: 576px) {
+  .restaurants article i {
+    margin-top: 0.2em;
+  }
 }
 @media (min-width: 768px) {
   .restaurants article i {
