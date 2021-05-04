@@ -8,4 +8,4 @@ restaurants car leur menu est préparé à l’avance. Plus de perte de temps à
 
 lien page web [Index.html](https://matou88.github.io/SteveMarchal_3_16042021/index.html)
 
-lien repository git [SteveMarchal_2_23022021](https://github.com/Matou88/SteveMarchal_3_16042021)
+lien repository git [SteveMarchal_3_16042021](https://github.com/Matou88/SteveMarchal_3_16042021)
