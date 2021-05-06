@@ -159,9 +159,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
         .fa-check-circle{
             color: white;
-            font-size: 0em;
+            font-size: 2.4em;
         }
 }
