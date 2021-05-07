@@ -18,13 +18,12 @@
 .fa-heart{
 
     &:hover{
-    font-weight: bold;
-    animation: like2;
-
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    animation-duration: .4s;
-    cursor: pointer;
+        font-weight: bold;
+        animation: like2;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-duration: .4s;
+        cursor: pointer;
     }
 }
 
@@ -96,8 +95,8 @@
 
 footer li:hover{
     @media (min-width: 768px){
-    border-bottom: 4px solid $color-tertiary;
-    cursor: pointer;
+        border-bottom: 4px solid $color-tertiary;
+        cursor: pointer;
     }
 }
 
